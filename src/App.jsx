@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import * as THREE from 'three'
 import SceneInit from './SceneInit'
+import axios from 'axios'
+import data_file from './data-handling/organized_data.json'
 
 function App() {
   useEffect(() => {
@@ -9,6 +11,14 @@ function App() {
     scene.animate();
 
     let nodeDictionary = {};
+
+    // get info from data file
+    axios.get(data_file).then((res) => {
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 
     // create nodes (spheres) & add to dictionary
     for (let i = 0; i < 100; i++) {
