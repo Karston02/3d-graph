@@ -21,7 +21,7 @@ function App() {
     })
 
     // create nodes (spheres) & add to dictionary
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 50; i++) {
       const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
       const sphereMaterial = new THREE.MeshNormalMaterial();
       const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
