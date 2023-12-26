@@ -37,7 +37,7 @@ function App() {
     }
 
     // create edges (lines) and connect them to 2 random nodes
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 100; i++) {
       const node1 = Math.floor(Math.random() * 100);
       const node2 = Math.floor(Math.random() * 100);
 
